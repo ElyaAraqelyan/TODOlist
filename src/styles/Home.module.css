@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.Home{
+  width: 100%;
+  height: 100vh;
+  background: url('../images/IMG_0764.JPEG') no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.frame {
+    width: 50%;
+    margin: 130px;
+}
+
+.h1 {
+    font-size: 80px;
+    margin: 15px 0;
+    color: #26425A;
+}
+
+.p{
+    width: 73%;
+    font-size: 20px;
+    margin: 15px 0;
+    color: #26425A;
+}
+
+.text{
+    color: #26425A;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.button {
+    width: 248px;
+    height: 62px;
+    background-color: #26425A;
+    color: #f7cbca;
+    border: none;
+    margin: 15px 0;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.button:hover{
+    background-color: #262f45;
+}
+

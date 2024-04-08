@@ -1,0 +1,79 @@
+.Item {
+    width: 600px;
+    border: 2px solid #26425A;
+    margin: 15px;
+    padding: 9px;
+    border-radius: 20px;
+    display: flex;
+}
+
+label {
+    display: flex;
+    align-items: center; 
+    margin-right: 10px;
+}
+  
+.btn, .button {
+    background-color: #26425A;
+    border: none;
+    width: 50px;
+    height: 20px;
+    border-radius: 20px;
+    position: absolute;
+    right: 29%;
+    padding: 3px;
+    cursor: pointer; 
+    color: #f7cbca;
+}
+
+.button {
+    right: 33%;
+}
+ 
+.btn:hover, .button:hover{
+    background-color: #262f45;
+    
+}
+.text{ 
+    margin: 0px 10px;
+    color: #26425A;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.custom-checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #26425A; 
+    border-radius: 3px;
+    cursor: pointer;
+}
+  
+.custom-checkbox::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 8px;
+    margin: 4px;
+    border-color: #f7cbca; 
+    border-width: 0 3px 3px 0;
+    border-style: solid;
+    transform: rotate(45deg);
+    padding-left: 1px;
+}
+  
+.custom-checkbox::after {
+    content: "";
+    display: none; 
+}
+
+input[type="checkbox"]:checked + .custom-checkbox::after {
+    display: inline-block; 
+}
+
