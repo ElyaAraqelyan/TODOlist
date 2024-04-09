@@ -35,6 +35,8 @@ label {
     
 }
 .text{ 
+    overflow: auto;
+    max-width: 420px;
     margin: 0px 10px;
     color: #26425A;
 }

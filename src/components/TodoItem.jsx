@@ -19,14 +19,9 @@ const TodoItem = ({ todo, onDelete, onChange, onInput }) => {
     e.preventDefault();
   };
 
-  const handleInput = (e) => {
-    console.log(e.target.innerHTML);
-    onInput(todo.id, e.target.innerHTML);
-  };
-
-  const handleKeyDown = (e) => {
+  const handleKeyDown = async (e) => {
     if (e.key === "Enter") {
-      handleClick();
+      await onInput(todo.id, e.target.textContent);
     }
   };
 
@@ -41,12 +36,11 @@ const TodoItem = ({ todo, onDelete, onChange, onInput }) => {
         />
         <span className={styles["custom-checkbox"]}></span>
         <p
-          onInput={handleInput}
           onBlur={handleClick}
           contentEditable={isEdit}
           suppressContentEditableWarning="false"
-          onKeyDown={handleKeyDown}
           onClick={handleParagraphClick}
+          onKeyDown={handleKeyDown}
           className={styles.text}
           style={todo.isCompleted ? { textDecoration: "line-through" } : {}}
         >
