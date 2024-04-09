@@ -4,10 +4,16 @@ import styles from "../styles/TodoForm.module.css";
 
 const TodoForm = ({ onAdd }) => {
   const [text, setText] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAdd(text);
-    setText("");
+    const trimmedText = text.trim();
+    if (trimmedText !== "") {
+      onAdd(trimmedText);
+      setText("");
+    } else {
+      alert("The input line is empty. Please, check it and write right tasks!");
+    }
   };
 
   const handleChange = (e) => {
